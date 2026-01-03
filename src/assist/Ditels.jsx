@@ -1,18 +1,22 @@
 import React, { useEffect, useState} from 'react';
 import Ditel from './Ditel';
-const Ditels = () => {
+const Ditels = ({ handelComment  }) => {
 
     const [ datas , setDatas] = useState([])
+         
+    
     useEffect( ()=>{
-        fetch("https://raw.githubusercontent.com/saju-79/B11A7-API/refs/heads/main/B11A7-api")
+        fetch("https://raw.githubusercontent.com/saju-79/B11A7-API/refs/heads/main/%3F%3D%3Dall%20/%3F%3D%3Did")
         .then((res) => res.json())
         .then((data) =>setDatas(data))
+        
+          
     },[])
-    console.log(datas)
+     
     return (
 
             <div>
-         <table className='border border-gray-300 w-full rounded-sm '>
+         <table className='border border-gray-300 w-full rounded-sm justify-center flex-col '>
            <tr className='border- border-gray-300 p-2'> 
             <th className='border border-gray-300 p-2 '> Items</th>
             <th className='border border-gray-300 p-2'>Current Bid </th>
@@ -23,7 +27,7 @@ const Ditels = () => {
            
             
                 {
-               datas.map(data =><Ditel data={data} key={data.id}></Ditel>)
+               datas.map(data =><Ditel     handelComment= { handelComment}  data={data} key={data.id}></Ditel>)
             }
 
            </table>

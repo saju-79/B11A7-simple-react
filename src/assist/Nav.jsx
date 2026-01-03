@@ -81,8 +81,7 @@ const Nav = () => {
       
       
       </section>
-      {/* navbenar */}
-      <section> <Navbenar></Navbenar></section>
+       <Navbenar></Navbenar> 
         </div>
     );
 };
