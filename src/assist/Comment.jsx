@@ -5,7 +5,7 @@ import Allditels from './Allditels';
  
  
 
-const Comment = ({id ,   alldata}) => {
+const Comment = ({id ,alldata}) => {
     return (
         <div>
             <div className=" justify-center items-center">
@@ -13,17 +13,13 @@ const Comment = ({id ,   alldata}) => {
                 <h1 className='justify-center text-center mt-6 font-semibold text-xl text-[#000000]'>No favorites yet</h1>
                 <p className='text-sm text-[#00000] mt-1 text-center'>Click the heart icon on any item to add it to your favorites</p>
             </div>
-            <table className=' mt-10 w-full rounded-sm justify-center flex-col'>
-                <tr><th className='text-start'>Total bids Amount</th>
-                <th> $0000</th></tr>
-                
+           
             {
-             alldata.map((data) =>data.id == id && <Allditels  data={data}></Allditels>  )
+             alldata.map((data) => data.id === id && <Allditels data={data} id={id}    ></Allditels>  )
           
             }   
                 
                  
-            </table>
 
         </div>
     );

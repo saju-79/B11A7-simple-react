@@ -16,10 +16,10 @@ function App() {
  const handelComment =(id)=>{
     setId( id)
  }
-  
- 
+   
   return (
     <>
+    
     <Nav></Nav>
     <div className='bg-gray-300 w-full mt-0  '>
    
